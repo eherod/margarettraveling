@@ -160,14 +160,14 @@ header{
    
   }
   .dog{
-    background-image: url('/images/littledog.jpg');
+    background-image: url('../images/littledog.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   
   }
   .pasta{
-    background-image: url('/images/pasta.jpg');
+    background-image: url('../images/pasta.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -176,7 +176,7 @@ header{
   }
   
   .marg{
-    background-image: url('/images/marg.jpg');
+    background-image: url('../images/marg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -185,7 +185,7 @@ header{
   
   
   .pastry{
-    background-image: url('/images/pastry.jpg');
+    background-image: url('../images/pastry.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
