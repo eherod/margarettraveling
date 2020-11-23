@@ -7,88 +7,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menu.css">
+  
   </head>
   <body>
-    <div class="container">
-    
-      <div class="nav-container active">
+      <div class="container">
+        <div class="contact-nav-container">
 
-        <div class="menu-wrap">
-          <input type="checkbox" class="toggler">
-          <div class="hamburger"><div></div></div>
-          <div class="menu">
-              <div>
+            <div class="menu-wrap">
+              <input type="checkbox" class="toggler">
+              <div class="hamburger"><div></div></div>
+              <div class="menu">
                   <div>
-                  <ul>
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                  </ul>
+                      <div>
+                      <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="about.html">About</a></li>
+                          <li><a href="contact.html">Contact</a></li>
+                      </ul>
+                      </div>
                   </div>
+      
               </div>
-  
           </div>
-      </div>
 
+          <div class="site-title">
+            <h1><a class="site-title" href="index.html">Margaret Traveling</h1>  
+          </div>
 
-        
-       
-        <nav class="nav-menu">
-          <a class="home-btn" href="index.html">HOME</a>
-          <a class="about-btn" href="about.html">ABOUT</a>
-          
-          <a class="contact-btn" href="contact.html">CONTACT</a>
-
-        </nav>
-     
-        <div class="site-title">
-          <h1><a class="site-title" href="index.html">Margaret Traveling</h1>
-            
         </div>
-        
-       
+
+        <main>
+            <section class="contact-me">
+                <h3 class="contact-me-heading">Contact Me</h3>
+                <hr class="contact-me-hr">
+
+            </section>
+
+            <section class="main-contact">
+
+                <h4 class="form-heading">Get in Touch!</h4>
+                
+                <form class="contact-form">
+                    <input id="inputName" class="contactFormElements" type="text" placeholder="Name">
+                    <input id="inputEmail" class="contactFormElements" type="email" placeholder="Email">
+                    <textarea id="inputTextArea" class="contactFormElements" placeholder="Message" rows="8" cols="80"></textarea>
+                    <button id="sendButton" class="signUP" type="submit" name="button">SEND</button>
+                  </form>
+
+
+
+            </section>
+
+            <section class="bottom-contact-section">
+                <p class="bottom-contact-paragraph">You can send me a message or ask me a general question using this form. </p>
+                <p class="bottom-contact-paragraph"> I will do my best to get back to you soon!  </p>
+                <h2 class="bottom-contact-title">MargaretTraveling</h2>
+
+
+
+            </section>
+
+
+        </main>
+
+        <footer>
+            <p>Copyright © 2020 MargaretTraveling - All Rights Reserved.</p>
+        </footer>
+
     </div>
-
-
-
-<div id="contactMe" class="letsGo">
-  <h3 id="contactHeader" class="letsGoHeader">Contact Me</h3>
-  <hr id="contactMeHr" class="letsGoHr">
-  <h4 class="getInTouch">Get in Touch!</h4>
-
-
-<div class="main-contact">
-
-
-<form class="contactForm">
-  <input id="inputName" class="contactFormElements" type="text" placeholder="Name">
-  <input id="inputEmail" class="contactFormElements" type="email" placeholder="Email">
-  <textarea id="inputTextArea" class="contactFormElements" placeholder="Message" rows="8" cols="80"></textarea>
-  <button id="sendButton" class="signUP" type="submit" name="button">SEND</button>
-</form>
-
-</div>
-
-<div class="bottomContactPage">
-
-  <p class="bottomContactP">  You can send me a message or ask me a general question using this form. </p>
-  <p class="bottomContactP">  I will do my best to get back to you soon!  </p>
-  <h2 class="bottomContactH2">MargaretTraveling</h2>
-
-  </div>
-
-
-
-
-
-
-<footer>
-  <p>Copyright © 2020 MargaretTraveling - All Rights Reserved.</p>
-</footer>
-</div>
-
-
-
-
+    <script src="main.js"></script>
   </body>
+  
 </html>

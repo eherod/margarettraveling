@@ -1,561 +1,461 @@
-
-/*------------------------------------------------------------------
-[Table of contents]
-
-1. Body
-2. Header / #header
-3. Navigation / #navbar
-4. Content / #content
-5. Left column / #leftcolumn
-6. Right column / #rightcolumn
-7. Sidebar / #sidebar
-8. RSS / #rss
-9. Search / #search
-10. Boxes / .box
-11. Sideblog / #sideblog
-12. Advertisements / .ads
-13. Footer / #footer
--------------------------------------------------------------------*/
 :root{
-  --primary-color: rgba(180, 226, 237,0);
-  --overlay-color: rgba(24,39,51,.85);
-  --menu-speed: 0.75s;
-}
-
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-
-}
-
-body{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  width: 100vw;
-  overflow-x: hidden;
-
-}
-.front-page-body{
-  height: 130vh;
-}
-.container{
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-}
-/* header */
-header{
-  height: 33.5rem;
-  background-image: url("../images/mgbgpic.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100vw; 
-}
-
-.active{
-  background-color: rgba(0,0,0,.85);
-  transition: all .5s
-  
-}
-
-.site-title{
-  font-family: 'Sacramento', cursive;
-  font-size: 2rem;
-  font-weight: lighter;
-  color: white;
-  text-decoration: none;
-  padding: 0;
-  
-}
-.site-description{
-  margin-right: auto;
-  margin-left: auto;
-  width: 90%;
-  text-align: center;
-  font-size: 3rem;
- 
-
-}
-
-
-
-
-.header-hr{
-  margin: 6rem 3rem;
-  border: none;
-  height: 1px;
-  color: #333; 
-  background-color: #fff; 
-  opacity: .3;
-
-
-}
-
-
-
-/*navigation*/
-.nav-container{
-  position: fixed;
-  display: flex;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  
-}
-
-
-nav{
-  display: flex;
-  flex-direction: column;
-  display: none;
- 
- 
-  
-
-}
-header nav a{
-  text-decoration: none;
-  color: inherit;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding: 1rem;
-  
-}
-.home-btn{
- 
- 
-
-  
-}
-.about-btn{
-
-}
-
-.contact-btn{
-  
-  
-  
-}
-
-
-
-
-
-
-
-/*Welcome div section */
-
-.welcomeDiv{
-  width: 100%;
-  height: 10em;
-  margin-right: auto;
-  margin-left: auto;
-}
-.welcomeHeader{
-  text-align: center;
-  margin-top: 4rem;
-  width: 100%;
-  font-family: 'Sacramento', cursive;
-  font-size: 3rem;
-  font-weight: lighter;
-  color: black;
-}
-.welcomeP{
-  margin-top: 2rem;
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  font-size: 1.75rem;
-  font-family: 'Raleway', arial, sans-serif;
-  letter-spacing: normal;
-  color: rgb(94, 94, 94);
-  line-height: 1.5;
-  font-weight: 400;
-}
-
-.letsGo{
-  width: 100%;
-  height: 15em;
-  background-color: rgb(180, 226, 237);
-}
-.letsGoHeader{
-  text-align: center;
-  padding-top: 2em;
-  font-family: 'Sacramento', cursive;
-  font-size: 3rem;
-  font-weight: lighter;
-  color: black;
-}
-.letsGoHr{
-  margin-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 3.5rem;
-  border-color: rgb(143, 205, 220);
-  border-bottom-width: 2px;
-  border-style: solid;
-}
-
-
-/*Images section*/
-
-.image-container{
-  width: 100%;
-  height: 8rem;
-  display: flex;
-  flex-direction: row;
-}
-
-.imgRow{
- width: 100%;
- height: 100%;
- padding: 2rem;
- overflow-y: hidden;
-
- 
-}
-.dog{
-  background-image: url('../images/littledog.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-}
-.pasta{
-  background-image: url('../images/pasta.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  
-
-}
-
-.marg{
-  background-image: url('../images/marg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-}
-
-
-.pastry{
-  background-image: url('../images/pastry.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-}
-
-
-/*mail list form on front page*/
-
-.mail-list-container{
-  height: 20rem;
-  width: 100%;
-  background-color: #f6f6f6;
-}
-
-.mailingListForm{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-top: 70px;
-  width: 100%;
-}
-
-
-.joinLabel{
-  font-family: "Raleway", arial, sans-serif;
-  font-size: 2.5rem;
-  color: rgb(117, 148, 156);
-  font-weight: 400;
-  line-height: 1.25;
-  padding-bottom: 1rem;
-}
-
-#enterEmail{
-  font-family: "Raleway", arial, sans-serif;
-  font-size: 1rem;
-  border-radius: 5px;
-  border-width: 1px;
-  width: 60%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-button{
-  font-family: "Raleway", arial, sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: 0.071em;
-  text-decoration: none;
-  background-color: rgb(180, 226, 237);
-  color: rgb(21, 22, 22);
-  height: 4rem;
-  width: 10rem;
-  border-radius: 5px;
-  border-style: none;
-}
-
-/* footer section */
-
-footer{
-  background-color: rgb(22, 22, 22);
-  width: 100%;
-  height: 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-}
-
-footer p{
-  font-family: 'Raleway', arial, sans-serif;
-  color: rgb(169, 169, 169);
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 400;
-
-}
-
-
-/*about page */
-
-#aboutLetsGo{
-  padding-top: 5rem;
-  padding-bottom: 30rem;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
- height: 5%;
-
-}
-.about-container{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-
-}
-.aboutMeMain{
-  width: 100%;
-  height: auto;
-  text-align: center;
-
-}
-
-.aboutImg{
-  width: 50%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3.5rem;
-
-}
-.aboutP{
-  color: rgb(62, 69, 71);
-  line-height: 1.5;
-  font-weight: 400;
-  font-size: 1.5rem;
-  font-family: 'Raleway', arial, sans-serif;
-  letter-spacing: normal;
-  text-align: left;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10rem;
-  margin-bottom: 0;
-  
-  
-}
-
-.about-footer{
-
-}
-
-
-
-
-
-
-
-
-  /* Contact Me Page */
-
-  .getInTouch{
-    text-align: center;
-    font-size: 25px;
-    color: rgb(27, 27, 27);
-    font-weight: 400;
-    font-family: "Raleway", arial, sans-serif;
-    margin-bottom: 24px;
-    margin-top: 40px;
+    --primary-color: rgba(180, 226, 237,0);
+    --overlay-color: rgba(24,39,51,.85);
+    --menu-speed: 0.75s;
   }
-  .main-contact{
+  
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  body{
+    margin: 0;
+    padding: 0;
+  
+   
+
+  
+  }
+
+  .container{
     display: flex;
-    justify-content: center;
-    width: 100%;
+    flex-direction: column;
+    width: 100vw;
   }
-.contactForm{
-text-align: center;
-width: 100%;
-margin-right: auto;
 
-
-}
-.contactFormElements{
-
-display: block;
-width: 100%;
-margin-left: auto;
-margin-right: auto;
-
-
-
-
-}
-  #contactHeader{
-
-  color: rgb(119, 154, 163);
-
-}
-#contactMe{
-  padding-top: 4rem;
-  padding-bottom: 30rem;
-  background-color: rgb(255, 255, 255);
-  height: 0;
-}
-
-#contactMeHr{
-border-color: rgb(226, 226, 226);
-}
-
-#inputName, #inputEmail, #inputTextArea{
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  color: rgb(71, 71, 71);
-  border-style: solid;
-  border-radius: 4px;
-  width: 60%;
-  border-color: rgb(226, 226, 226);
-  background-color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-family: "Raleway", arial, sans-serif;
-  margin-bottom: 2rem;
-
-
-}
-
-
-.signUP{
-  width: 5rem;
-  margin-bottom: 2rem;
- 
-
-}
-
-.bottomContactPage{
-  text-align: center;
-}
-
-.bottomContactP{
-  font-size: 18px;
-  color: rgb(94, 94, 94);
-  line-height: 1.5;
-  font-weight: 400;
-  font-family: 'Raleway', arial, sans-serif;
-  margin-bottom: 30px;
-
-}
-.bottomContactH2{
-  margin-top: 75px;
-  margin-bottom: 100px;
-  font-size: 25px;
-  color: rgb(27, 27, 27);
-  font-weight: 400;
-  font-family: 'Raleway', arial, sans-serif;
-
-}
-
-
-@media (min-width: 1022px){
-  header{
+  /* header */
+header{
     height: 33.5rem;
-    background-image: url("images/mgbgpic.jpg");
+    background-image: url("../images/mgbgpic.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
-    width: 100vw;
+    width: 100vw; 
+  }
   
+  .active{
+    background-color: rgba(0,0,0,.85);
+    transition: all .5s
     
   }
   
-  header hr{
-    margin: 5rem 2rem;
+  .site-title{
+    font-family: 'Sacramento', cursive;
+    font-size: 2rem;
+    font-weight: lighter;
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    
+  }
+  .site-description{
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    text-align: center;
+    font-size: 3rem;
+   
+  
+  }
+  
+  .header-hr{
+    margin: 6rem 3rem;
     border: none;
     height: 1px;
     color: #333; 
     background-color: #fff; 
     opacity: .3;
+  
   }
-
+/*navigation*/
   .nav-container{
     position: fixed;
-    
+    display: flex;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    
   }
-  nav{
+
+
+  /*Welcome div section */
+
+.welcome-main{
+    width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .welcome-heading{
+    text-align: center;
+    margin-top: 4rem;
+    width: 100%;
+    font-family: 'Sacramento', cursive;
+    font-size: 3rem;
+    font-weight: lighter;
+    color: black;
+  }
+  .welcome-paragraph{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: 1.75rem;
+    font-family: 'Raleway', arial, sans-serif;
+    letter-spacing: normal;
+    color: rgb(94, 94, 94);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  /* let's go section */
+
+.lets-go-section{
+    width: 100%;
+    height: auto;
+    background-color: rgb(180, 226, 237);
+    /* This padding may need to be removed in wordpress*/
+    padding-bottom: 10rem; 
+  }
+  .lets-go-heading{
+    text-align: center;
+    padding-top: 2em;
+    font-family: 'Sacramento', cursive;
+    font-size: 3rem;
+    font-weight: lighter;
+    color: black;
+  }
+  .lets-go-hr{
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 3.5rem;
+    border-color: rgb(143, 205, 220);
+    border-bottom-width: 2px;
+    border-style: solid;
+  }
+
+  /*Images section*/
+
+.main-image-section{
+    width: 100%;
+    height: 8rem;
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    align-items: baseline;
+  }
+  
+  .img-row{
+   width: 100%;
+   height: 100%;
+   padding: 2rem;
+   overflow-y: hidden;
+  
+   
+  }
+  .dog{
+    background-image: url('/images/littledog.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  }
+  .pasta{
+    background-image: url('/images/pasta.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     
   
   }
-  header nav a{
-    text-decoration: none;
-    color: inherit;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.2rem;
-    color: white;
+  
+  .marg{
+    background-image: url('/images/marg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  }
+  
+  
+  .pastry{
+    background-image: url('/images/pastry.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  }
+
+  /*mail list form on front page*/
+
+.mail-list-container{
+    height: auto;
+    width: 100%;
+    background-color: #f6f6f6;
+    padding: 4rem 0;
+  }
+  
+  .mail-list-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  
+  .join-label{
+    font-family: "Raleway", arial, sans-serif;
+    font-size: 2.5rem;
+    color: rgb(117, 148, 156);
+    font-weight: 400;
+    line-height: 1.25;
+    padding-bottom: 2rem;
+  }
+  
+  #enter-email{
+    font-family: "Raleway", arial, sans-serif;
+    font-size: 1rem;
+    border-radius: 5px;
+    border-width: 1px;
+    width: 80%;
     padding: 1rem;
+    margin-bottom: 2rem;
     
   }
-  .home-btn{
-    flex: 0 1 1rem;
-    margin-right: 1rem;
-    margin-left: 1.5rem;
+  
+  button{
+    font-family: "Raleway", arial, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.071em;
+    text-decoration: none;
+    background-color: rgb(180, 226, 237);
+    color: rgb(21, 22, 22);
+    height: 4rem;
+    width: 40%;
+    border-radius: 5px;
+    border-style: none;
+  }
+
+  /* footer section */
+
+footer{
+    background-color: rgb(22, 22, 22);
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  footer p{
+    font-family: 'Raleway', arial, sans-serif;
+    color: rgb(169, 169, 169);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+  
+  }
+
+
+  /*Subsequent Pages */
+
+
+  /*navigation for About and Contact pages*/
+.contact-nav-container, .about-nav-container{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    background-color: rgba(0,0,0,.85);
+    transition: all .5s
     
   }
-  .about-btn{
-    flex: 1 1 1rem;
+
+  /*ABOUT PAGE*/
+
+
+  .about-me{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    
+    
+    background-color: rgb(180, 226, 237); 
+  
   }
-  .site-title{
+
+  .about-me-header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+  }
+ 
+
+  .about-me-heading{
+    text-align: center;
+    padding-top: 2em;
     font-family: 'Sacramento', cursive;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: lighter;
-    flex: 1.5 1 1rem;
-  
+    color: black;
+
   }
-  .contact-btn{
-    flex: 0 1 1rem;
-    margin-right: 1rem;
+
+  
+  .about-me-hr{
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 3.5rem;
+    border-color: rgb(143, 205, 220);
+    border-bottom-width: 2px;
+    border-style: solid;
+  }
+
+.about-image-div{
+    width: 100%;
+    background-color: rgb(180, 226, 237); 
+    height: auto;
+    display: flex;
+    justify-content: center;
+     
+}
+.about-image{
+  width: 40%;
+  height: auto;
+
+}
+
+  .about-paragraph{
+    color: rgb(62, 69, 71);
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: 'Raleway', arial, sans-serif;
+    letter-spacing: normal;
+    text-align: left;
+    width: 80%;
+    padding: 2rem 1rem;
+    margin: auto;
+     
+    
+  }
+
+  /*Contact*/
+  .contact-me{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
     
   }
 
 
+  .contact-me-heading{
+    text-align: center;
+    padding-top: 2em;
+    font-family: 'Sacramento', cursive;
+    font-size: 3rem;
+    font-weight: lighter;
+    color: rgb(119, 154, 163);
 
+  }
+  .contact-me-hr{
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 3.5rem;
+    border-bottom-width: 2px;
+    border-style: solid;
+    border-color: rgb(226, 226, 226);
+  }
+
+  .main-contact{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+     
+  }
+  .form-heading{
+    text-align: center;
+    font-size: 25px;
+    color: rgb(27, 27, 27);
+    font-weight: 400;
+    font-family: "Raleway", arial, sans-serif;
+    margin-bottom: 2rem;
+  
+  }
+
+  .contact-form{
+    text-align: center;
+    width: 100%;
+  }
+
+  #inputName, #inputEmail, #inputTextArea{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: rgb(71, 71, 71);
+    border-style: solid;
+    border-radius: 4px;
+    width: 60%;
+    border-color: rgb(226, 226, 226);
+    background-color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-family: "Raleway", arial, sans-serif;
+    margin-bottom: 2rem;
+  
+  
+  }
+
+  .bottom-contact-section{
+      width: 100%;
+      height: auto;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 3rem;
+  }
+  .bottom-contact-paragraph{
+    font-size: 1.25rem;
+    color: rgb(94, 94, 94);
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: 'Raleway', arial, sans-serif;
+    margin-bottom: 1rem;
+    width: 100%;
 
   
   }
+
+  .bottom-contact-title{
+   
+    
+    font-size: 2rem;
+    color: rgb(27, 27, 27);
+    font-weight: 400;
+    font-family: 'Raleway', arial, sans-serif;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+  }
+  
