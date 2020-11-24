@@ -39,10 +39,15 @@ header{
   
   .active{
     background-color: rgba(0,0,0,.85);
-    transition: all .5s
+    transition: all .5s;
+    
     
   }
-  
+  .large-screen-nav{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+  }
   .site-title{
     font-family: 'Sacramento', cursive;
     font-size: 2rem;
@@ -51,13 +56,17 @@ header{
     text-decoration: none;
     padding: 0;
     
+    
   }
   .site-description{
     margin-right: auto;
     margin-left: auto;
     width: 90%;
-    text-align: center;
+    text-align: center;font-family: 'Sacramento', cursive;
     font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    padding: 0;
    
   
   }
@@ -81,15 +90,107 @@ header{
     justify-content: center;
     
   }
+  .large-nav-items{
+    display: none;
+}
+@media (min-width: 750px){
+   
+    .menu-wrap{
+        display: none;
+    }
+    .large-nav-items{
+        display: inline-block;
+ 
+   
+    
+    }
+    .large-screen-nav{
+        width: 100%;
+        margin-bottom: 0;     
+}
+
+
+
+.large-nav-items a{
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+
+}
+.left-side-large-nav{
+    float: left;
+    width: 30%;
+    margin-top: 1rem;
+}
+.right-side-large-nav{
+    float: right;
+    width: 20%;
+    margin-top: -3rem;  
+}
+
+.home{
+    margin-left: 20%;
+    
+   
+}
+.about{
+  margin-left: 20%;
+
+}
+.site-title{
+    
+    margin-left: 10%;
+    margin-right: auto;
+   
+  
+}
+.contact{ 
+ 
+}
+
+.site-description{
+    margin-top: 8rem;
+}
+
+}
+
+@media (min-width: 800px){
+    .right-side-large-nav{
+        margin-right: -1rem;
+    }
+    
+}
+
+@media (min-width: 900px){
+    .right-side-large-nav{
+        margin-right: -2rem;
+    }
+}
+
+
+@media (min-width: 1013px){
+.site-description{
+    margin-top: 10rem;
+}
+.right-side-large-nav{
+    margin-right: -3rem;
+}
+}
+
+@media (min-width: 1150px){
+    .right-side-large-nav{
+        margin-right: -4rem;
+    }
+}
 
 
   /*Welcome div section */
 
 .welcome-main{
     width: 100%;
-    height: auto;
     margin-right: auto;
     margin-left: auto;
+
   }
   .welcome-heading{
     text-align: center;
@@ -103,7 +204,6 @@ header{
   .welcome-paragraph{
     margin-top: 2rem;
     margin-bottom: 2rem;
-    padding-bottom: 3rem;
     width: 80%;
     margin-right: auto;
     margin-left: auto;
@@ -114,6 +214,18 @@ header{
     color: rgb(94, 94, 94);
     line-height: 1.5;
     font-weight: 400;
+  }
+
+  @media (min-width: 650px){
+   .welcome-main{
+     height: 75vh;
+   }
+   .welcome-heading{
+     margin-top: 10rem;
+   }
+   .welcome-paragraph{
+     width: 90%;
+   }
   }
 
   /* let's go section */
@@ -167,14 +279,14 @@ header{
    
   }
   .dog{
-    background-image: url('../images/littledog.jpg');
+    background-image: url('/images/littledog.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   
   }
   .pasta{
-    background-image: url('../images/pasta.jpg');
+    background-image: url('/images/pasta.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -183,7 +295,7 @@ header{
   }
   
   .marg{
-    background-image: url('../images/marg.jpg');
+    background-image: url('/images/marg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -192,7 +304,7 @@ header{
   
   
   .pastry{
-    background-image: url('../images/pastry.jpg');
+    background-image: url('/images/pastry.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -251,6 +363,47 @@ header{
     border-style: none;
   }
 
+@media (min-width: 750px){
+  .mail-list-form{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  .join-label{
+    width: 100%;
+  }
+  button{
+    width: 15%;
+    height: 3.25rem;
+  }
+  #enter-email{
+    width: 60%;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
+
+@media (min-width: 1000px){
+  .join-label{
+    width: 36%;
+    margin-left: 2rem;
+    align-self: end;
+    padding-top: .25rem;
+  }
+  button{
+    width: 8%;
+    margin-left: 3rem;
+   
+  }
+  #enter-email{
+    width: 40%;
+    margin-right: 0;
+    margin-left: 1rem;
+  
+  }
+
+}
+
   /* footer section */
 
 footer{
@@ -292,7 +445,7 @@ footer{
 
   /*ABOUT PAGE*/
 
-
+ 
   .about-me{
     display: flex;
     flex-direction: column;
@@ -362,6 +515,48 @@ footer{
     margin: auto;
      
     
+  }
+  @media (min-width: 800px){
+    .about-me{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .about-image-div{
+      width: 30%;
+      display: block;
+      margin-left: 4rem;
+      margin-bottom: 25rem;
+      align-self: center;
+      
+    }
+    .about-image{
+      width: 100%;
+      padding: 0;
+    }
+    .about-paragraph{
+     width: 50%;
+    margin-bottom: 5rem;
+
+  
+    
+    }
+  
+
+  }
+
+  @media (min-width: 940px){
+    .about-image-div{
+      margin-bottom: 0rem;
+    }
+
+
+  }
+  @media (min-width: 1240px){
+    .about-paragraph{
+      margin-top: 5rem;
+    }
+
   }
 
   /*Contact*/
@@ -472,4 +667,25 @@ footer{
   .contact-footer{
       margin-top: 7.3rem;
   }
-  
+
+  @media(min-width: 650px){
+    .contact-me{
+      margin-top: 4rem;
+      margin-bottom: 0;
+    }
+    .main-contact{
+      margin-top: 5rem;
+      margin-bottom: 0;
+    }
+    .form-heading{
+      margin-bottom: 4rem;
+    }
+    .contact-form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+    
+  }
+
+}
