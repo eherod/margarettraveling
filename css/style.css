@@ -62,7 +62,8 @@ header{
     margin-right: auto;
     margin-left: auto;
     width: 90%;
-    text-align: center;font-family: 'Sacramento', cursive;
+    text-align: center;
+    font-family: 'Sacramento', cursive;
     font-size: 3rem;
     color: white;
     text-decoration: none;
@@ -93,6 +94,7 @@ header{
   .large-nav-items{
     display: none;
 }
+
 @media (min-width: 750px){
    
     .menu-wrap{
@@ -100,10 +102,8 @@ header{
     }
     .large-nav-items{
         display: inline-block;
- 
-   
-    
     }
+
     .large-screen-nav{
         width: 100%;
         margin-bottom: 0;     
@@ -144,9 +144,7 @@ header{
    
   
 }
-.contact{ 
- 
-}
+
 
 .site-description{
     margin-top: 8rem;
@@ -190,6 +188,7 @@ header{
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+  
 
   }
   .welcome-heading{
@@ -238,10 +237,15 @@ header{
     padding-bottom: 10rem; 
   }
   .posts-here{
-     
-      margin-left: 10rem;
-      margin-top: 20rem;
-      margin-bottom: 20rem;
+
+    border: 2px solid black;
+    width: 25%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 150px;
+    margin-bottom: 150px;
   }
   .lets-go-heading{
     text-align: center;
@@ -279,14 +283,14 @@ header{
    
   }
   .dog{
-    background-image: url('../images/littledog.jpg');
+    background-image: url('/images/littledog.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   
   }
   .pasta{
-    background-image: url('../images/pasta.jpg');
+    background-image: url('/images/pasta.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -295,7 +299,7 @@ header{
   }
   
   .marg{
-    background-image: url('../images/marg.jpg');
+    background-image: url('/images/marg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -304,7 +308,7 @@ header{
   
   
   .pastry{
-    background-image: url('../images/pastry.jpg');
+    background-image: url('/images/pastry.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
